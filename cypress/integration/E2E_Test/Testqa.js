@@ -16,3 +16,7 @@ describe('Valid login',()=> {
 })
 
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
