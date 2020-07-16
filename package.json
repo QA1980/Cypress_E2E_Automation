@@ -17,10 +17,7 @@
   "author": "karim",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^4.10.0",
-    "mocha": "5.2.0",
-    "mochawesome": "4.1.0",
-    "mochawesome-merge": "2.0.1",
-    "mochawesome-report-generator": "4.0.1"
+    "cypress": "^4.10.0"
+    
   }
 }
