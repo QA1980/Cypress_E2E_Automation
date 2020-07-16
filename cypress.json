@@ -1,4 +1,10 @@
 {
   "projectId": "zztu8j",
-  "watchForFileChange": false
+  "watchForFileChange": false,
+  "reporter": "mochawesome",
+    "reporterOptions": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+    }
 }
