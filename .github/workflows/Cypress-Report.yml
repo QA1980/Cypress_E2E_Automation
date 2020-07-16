@@ -17,26 +17,26 @@ jobs:
        npm ci
        $(npm bin)/cypress verify
        
-    -name: Run Cypress Test
-     run:
-     npm run test:chrome
-         continue-on-error: false
-                   
+    -name: Run Cypress Tests
+    run: npm run test:chrome 
+    continue-on-error: false               
     
-   -name: Copy Test Execution Screenshots and Videos
-    run: 
+  -name: Copy Test Execution Screenshots and Videos 
+  run: 
      mkdir public
     cp -r cypress/videos public/videos
     cp -r cypress/screenshots public/screenshots
     
-     -name: Merge test report
-     run: npm run combine:report
-     
-      -name: Deploy
+-name: Merge test reports 
+run: npm run combine:report
+
+ -name: Generate Report 
+
+run: npm run generate:report
+ 
+-name: Deploy
   uses: peaceiris/actions-gh-pages@v3
   with:
     github_token: ${{ secrets.GITHUB_TOKEN }}
     publish_dir: ./public
-     
-     -name: generate HTML REPORT
-      run npm run generate:report
+    
