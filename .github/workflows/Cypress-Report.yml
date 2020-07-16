@@ -1,4 +1,4 @@
-
+# workflow report
 name : Generate Cypress Report
 on:
   push:
