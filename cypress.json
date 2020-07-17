@@ -1,6 +1,7 @@
 {
   "projectId": "zztu8j",
   "watchForFileChange": false,
+  "chromeWebSecurity": false,
   "reporter": "mochawesome",
   "reporterOptions": {
     "reportDir": "cypress/results",
@@ -9,3 +10,4 @@
     "json": true
   }
 }
+,
