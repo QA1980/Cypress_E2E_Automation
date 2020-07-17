@@ -18,3 +18,11 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+/**
+ * 
+ * @type {Cypress.PluginConfig} on 
+ * 
+ */
+module.exports= (on, config) => {
+
+}
