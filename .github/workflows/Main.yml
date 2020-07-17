@@ -7,10 +7,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       # https://github.com/cypress-io/github-action
-      - name: Cypress run
+      - name: Cypress run --record --key 946359c6-b35e-4883-b24f-702a9cb281e0
         uses: cypress-io/github-action@v1
         with:
           record: true
-        env:
-          # pass the Dashboard record key as an environment variable
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+        
