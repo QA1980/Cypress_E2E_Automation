@@ -27,14 +27,12 @@ module.exports= (on, config) => {
 
 }
 Cypress.on('uncaught:exception', (err, runnable) => {
-<<<<<<< HEAD
+
     // returning false here prevents Cypress from
     // failing the test
     return false
 })
-=======
+
   // returning false here prevents Cypress from
   // failing the test
-  return false
-})
->>>>>>> 0018ad0577eeecf3dd4551d2180c592d6852b8ad
+  
