@@ -1,12 +1,20 @@
 {
   "projectId": "zztu8j",
+  "CYPRESS_RECORD_KEY" :"946359c6-b35e-4883-b24f-702a9cb281e0",
   "watchForFileChange": false,
   "chromeWebSecurity": false,
-  "reporter": "mochawesome",
-  "reporterOptions": {
-    "reportDir": "cypress/results",
+  "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+    },
+    "reporterEnabled": "mochawesome",
+      "mochawesomeReporterOptions": {
+    "reportDir": "cypress/results/json",
     "overwrite": false,
     "html": false,
     "json": true
-  }
 }
+   
+  
+}
+
