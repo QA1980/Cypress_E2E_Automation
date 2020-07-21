@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix: 
-        machine: [1, 2, 3 ]
+       machine: [1, 2, 3 ]
     container: cypress/browsers:node12.14.1-chrome83-ff77
     steps:
       - uses: actions/checkout@v2
