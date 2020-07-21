@@ -10,9 +10,9 @@ on:
 jobs:
   
   cypress-e2e-chrome81:
-    name: Run on Chrome 81
-    runs-on: ubuntu-18.04
-    container: cypress/browsers:node12.16.2-chrome81-ff75
+    name: Run on Chrome 83
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.14.1-chrome83-ff77
     steps:
       - uses: actions/checkout@v2
       
@@ -25,7 +25,7 @@ jobs:
       
       - name: Run Cypress tests
         run: npm run test:chrome
-        continue-on-error: true
+        continue-on-error: false
       
       - name: Copy test execution videos
         run: |
@@ -43,5 +43,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+         
+
