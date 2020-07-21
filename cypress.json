@@ -2,6 +2,7 @@
   "projectId": "zztu8j",
   "CYPRESS_RECORD_KEY" :"946359c6-b35e-4883-b24f-702a9cb281e0",
   "watchForFileChange": false,
+  "ignoreTestFiles": ["**examples/**"],
   "chromeWebSecurity": false,
   "reporter": "cypress-multi-reporters",
     "reporterOptions": {
