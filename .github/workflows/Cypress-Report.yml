@@ -12,6 +12,9 @@ jobs:
   cypress-e2e-chrome81:
     name: Run on Chrome 83
     runs-on: ubuntu-latest
+    strategy:
+      matrix: 
+       machine: [1, 2, 3 ]
     container: cypress/browsers:node12.14.1-chrome83-ff77
     steps:
       - uses: actions/checkout@v2
@@ -23,9 +26,15 @@ jobs:
           $(npm bin)/cypress cache list
           $(npm bin)/cypress verify
       
-      - name: Run Cypress tests
-        run: npm run test:chrome
-        continue-on-error: false
+      - name: Run Cypress tests 
+        uses: cypress-io/github-action@v1 
+        with:
+          parallel: true  
+          record: true  
+        env: 
+         CYPRESS_RECORD_KEY: 946359c6-b35e-4883-b24f-702a9cb281e0
+        #run: npm run test:chrome
+        continue-on-error: true
       
       - name: Copy test execution videos
         run: |
@@ -42,6 +51,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./public 
+         
          
 
