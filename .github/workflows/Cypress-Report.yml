@@ -30,6 +30,9 @@ jobs:
         uses: cypress-io/github-action@v1 
         with:
           parallel: true  
+          record: true  
+        env: 
+         CYPRESS_RECORD_KEY: 946359c6-b35e-4883-b24f-702a9cb281e0
         #run: npm run test:chrome
         continue-on-error: true
       
